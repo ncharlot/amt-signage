@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ardennes Mega Trail 2019</title>
+  <style type="text/css">
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    iframe.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <iframe 
+    id="iframe0"
+    allowfullscreen
+    src="">
+  </iframe>
+
+  <iframe 
+    id="iframe1"
+    allowfullscreen
+    src="">
+  </iframe>
+
+  <script>
+    (async function() {
+      var seq = await refreshSeq(seq);      
+      setInterval(function() {
+        refreshSeq().then(function(new_seq) {
+          seq = new_seq;
+        });
+      }, 30000);  
+
+      var current = 0;
+      var iframe = 1;
+
+      while (true) {
+        iframe = toggleIframe(iframe);
+        await show(seq[current], iframe);
+        current = (current+1) % seq.length
+      }
+    })();
+
+    async function refreshSeq() {
+      let response = await fetch('/seq.json');
+      let data = await response.json();
+      return data;
+    }
+
+    function show(slide, iframe) {
+      getIframeElement(iframe).setAttribute('src', slide["url"]);
+
+      return new Promise(function(resolve) {
+        setTimeout(resolve, slide["duration"]);
+      });
+    }    
+
+    function getIframeElement(iframe) {
+      return document.getElementById('iframe'+iframe);
+    }
+
+    function toggleIframe(iframe) {
+      nextIframe = (iframe+1) % 2;
+      getIframeElement(iframe).className = 'inactive';
+      getIframeElement(nextIframe).className = 'active';
+      return nextIframe;
+    }
+  </script>
+</body>
+</html>
