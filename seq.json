@@ -7,5 +7,6 @@
     { "url": "/programme02.html", "duration": 10000 },
     { "url": "/programme03.html", "duration": 10000 },
     { "url": "/programme04.html", "duration": 10000 },
-    { "url": "/programme05.html", "duration": 10000 }        
+    { "url": "/programme05.html", "duration": 10000 },
+    { "url": "/facebook.html", "duration": 3000 }            
 ]
