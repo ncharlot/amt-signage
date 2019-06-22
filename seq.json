@@ -1,12 +1,12 @@
 [
-    { "url": "/intro.html", "duration": 3000 },
+    { "url": "/intro.html", "duration": 5000 },
     { "url": "/partners1.html", "duration": 3000 },
     { "url": "/partners2.html", "duration": 3000 },   
     { "url": "/partners3.html", "duration": 3000 },        
     { "url": "/partners4.html", "duration": 3000 },
-    { "url": "/programme02.html", "duration": 10000 },
     { "url": "/programme03.html", "duration": 10000 },
     { "url": "/programme04.html", "duration": 10000 },
     { "url": "/programme05.html", "duration": 10000 },
-    { "url": "/facebook.html", "duration": 3000 }            
+    { "url": "/programme06.html", "duration": 10000 },
+    { "url": "/facebook.html", "duration": 5000 }            
 ]
