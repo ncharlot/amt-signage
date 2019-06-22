@@ -1,3 +1,13 @@
 [
-    { "url": "/retard.html", "duration": 30000 }
+    { "url": "/intro.html", "duration": 3000 },
+    { "url": "/partners1.html", "duration": 3000 },
+    { "url": "/partners2.html", "duration": 3000 },   
+    { "url": "/partners3.html", "duration": 3000 },        
+    { "url": "/partners4.html", "duration": 3000 },
+    { "url": "/live.html#1_F5F79B", "duration": 180000 },
+    { "url": "/url_live.html", "duration": 10000 },
+    { "url": "/programme04.html", "duration": 5000 },
+    { "url": "/programme05.html", "duration": 5000 },
+    { "url": "/podiums.html", "duration": 5000 },
+    { "url": "/facebook.html", "duration": 3000 }            
 ]
